@@ -10,7 +10,20 @@ import com.example.recyclearviewapp.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private val nameList = listOf("Mehedi", "Masum", "Avijit", "Mehedi", "Masum", "Avijit","Mehedi", "Masum", "Avijit", "Mehedi", "Masum", "Avijit")
-    val clebList= listOf<Celeb>(Celeb("Priyanka Chopra Jonas", priyankabio,profileimg))
+    val clebList= listOf<Celeb>(Celeb("Priyanka Chopra Jonas", priyankabio,profileimg),
+        Celeb("Ananya Panday",annabio,annaimg),
+        Celeb("Janhvi Kapoor",janvibio,janviimg),
+        Celeb("Rashmika Mandanna",rasbio,rashimg),
+
+
+
+
+        )
+
+
+
+
+
     private lateinit var nameAdapter: NameAdapter
     private lateinit var binding: ActivityMainBinding
 
