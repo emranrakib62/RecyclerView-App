@@ -1,2 +1,3 @@
 package com.example.recyclearviewapp
-
+const val priyankabio="Priyanka Chopra Jonas (née Chopra) was born on July 18, 1982 in Jamshedpur, India, to the family of Capt. Dr. Ashok Chopra and Dr. Madhu Chopra, both Indian Army physicians. She had a very varied upbringing. She started her education at La Martinière Girls College in Lucknow as a resident student; "
+const val profileimg="https://www.imdb.com/name/nm1231899/mediaviewer/rm2819207936/?ref_=nm_ov_ph"
