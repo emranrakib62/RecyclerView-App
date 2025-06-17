@@ -1,6 +1,7 @@
 package com.example.recyclearviewapp
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -25,6 +26,18 @@ getItem(position).let {
     Glide.with(context)
         .load(it.profileImage)
         .into(holder.binding.profileimg)
+holder.itemView.setOnClickListener {_ ->
+
+    val intent=Intent(context,FullActivity::class.java)
+    intent.putExtra("img",it.profileImage)
+    intent.putExtra("name",it.name)
+    intent.putExtra("bio",it.bio)
+
+
+
+    context.startActivity(intent)
+
+}
 
 
 
