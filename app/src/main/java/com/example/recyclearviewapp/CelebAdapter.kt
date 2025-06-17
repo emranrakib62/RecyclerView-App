@@ -19,11 +19,11 @@ class CelebAdapter :ListAdapter<Celeb,CelebViewHolder>() {
 companion object{
     val comparator= object: DiffUtil.ItemCallback<Celeb>(){
         override fun areItemsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
-            TODO("Not yet implemented")
+           return oldItem.name==newItem.name
         }
 
         override fun areContentsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
-            TODO("Not yet implemented")
+            return oldItem=newItem
         }
 
 
