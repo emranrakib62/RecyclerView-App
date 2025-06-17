@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
 
     private lateinit var nameAdapter: NameAdapter
+    lateinit var celebAdapter: CelebAdapter;
+
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +38,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         nameAdapter = NameAdapter()
-        binding.nameRCV.adapter = nameAdapter
         nameAdapter.submitList(nameList)
+celebAdapter=CelebAdapter()
+        celebAdapter.submitList(clebList)
+
+
+        binding.nameRCV.adapter = nameAdapter
     }
 }
