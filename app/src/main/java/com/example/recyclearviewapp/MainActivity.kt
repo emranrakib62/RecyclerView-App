@@ -43,6 +43,6 @@ celebAdapter=CelebAdapter()
         celebAdapter.submitList(clebList)
 
 
-        binding.nameRCV.adapter = nameAdapter
+        binding.nameRCV.adapter = celebAdapter
     }
 }
