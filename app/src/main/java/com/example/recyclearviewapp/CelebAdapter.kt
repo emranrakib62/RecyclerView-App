@@ -4,15 +4,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.example.recyclearviewapp.databinding.ItemNameBinding
 
 
 class CelebAdapter : ListAdapter<Celeb, CelebViewHolder>(comparator) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CelebViewHolder {
-
+val binding=ItemCelebBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+    return CelebViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: CelebViewHolder, position: Int) {
+getItem(position).let {
+    holder.binding.nametv.text=it.name
+    holder.binding.biotv.text=it.bio
+
+
+}
+
 
     }
 
