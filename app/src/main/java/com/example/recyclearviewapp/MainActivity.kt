@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         nameAdapter = NameAdapter()
         nameAdapter.submitList(nameList)
-celebAdapter=CelebAdapter()
+celebAdapter=CelebAdapter(this@MainActivity)
         celebAdapter.submitList(clebList)
 
 

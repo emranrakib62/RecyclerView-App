@@ -1,13 +1,15 @@
 package com.example.recyclearviewapp
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.bumptech.glide.Glide
 import com.example.recyclearviewapp.databinding.CelebBinding
 
 
-class CelebAdapter : ListAdapter<Celeb, CelebViewHolder>(comparator) {
+class CelebAdapter(var context: Context) : ListAdapter<Celeb, CelebViewHolder>(comparator) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CelebViewHolder {
 val binding=CelebBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -16,8 +18,14 @@ val binding=CelebBinding.inflate(LayoutInflater.from(parent.context),parent,fals
 
     override fun onBindViewHolder(holder: CelebViewHolder, position: Int) {
 getItem(position).let {
+
     holder.binding.nametv.text=it.name
     holder.binding.biotv.text=it.bio
+
+    Glide.with(context)
+        .load(it.profileImage)
+        .into(holder.binding.profileimg)
+
 
 
 }
