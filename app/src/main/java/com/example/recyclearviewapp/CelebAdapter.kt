@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 
-class CelebAdapter :ListAdapter<Celeb,CelebViewHolder>() {
+class CelebAdapter :ListAdapter<Celeb,CelebViewHolder>(comparator) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CelebViewHolder {
 
@@ -23,7 +23,7 @@ companion object{
         }
 
         override fun areContentsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
-            return oldItem=newItem
+            return oldItem==newItem
         }
 
 
