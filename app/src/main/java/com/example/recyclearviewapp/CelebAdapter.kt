@@ -2,13 +2,13 @@ package com.example.recyclearviewapp
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 
-class CelebAdapter :ListAdapter<Celeb,CelebViewHolder>(comparator) {
+
+class CelebAdapter : ListAdapter<Celeb, CelebViewHolder>(comparator) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CelebViewHolder {
-
 
     }
 
@@ -16,18 +16,15 @@ class CelebAdapter :ListAdapter<Celeb,CelebViewHolder>(comparator) {
 
     }
 
-companion object{
-    val comparator= object: DiffUtil.ItemCallback<Celeb>(){
-        override fun areItemsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
-           return oldItem.name==newItem.name
+    companion object {
+        val comparator = object : DiffUtil.ItemCallback<Celeb>() {
+            override fun areItemsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
+                return oldItem.name == newItem.name
+            }
+
+            override fun areContentsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
+                return oldItem == newItem
+            }
         }
-
-        override fun areContentsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
-            return oldItem==newItem
-        }
-
-
     }
-}
-
 }
