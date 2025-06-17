@@ -23,6 +23,7 @@
             android:src="@drawable/pi" />
 
         <TextView
+            android:textColor="#2BD517"
             android:id="@+id/nametv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +32,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
         <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
             android:id="@+id/biotv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
