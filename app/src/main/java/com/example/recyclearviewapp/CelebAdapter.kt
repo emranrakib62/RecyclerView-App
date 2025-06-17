@@ -3,6 +3,7 @@ package com.example.recyclearviewapp
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ListAdapter
+import androidx.recyclerview.widget.DiffUtil
 
 class CelebAdapter :ListAdapter<Celeb,CelebViewHolder>() {
 
@@ -15,6 +16,18 @@ class CelebAdapter :ListAdapter<Celeb,CelebViewHolder>() {
 
     }
 
+companion object{
+    val comparator= object: DiffUtil.ItemCallback<Celeb>(){
+        override fun areItemsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
+            TODO("Not yet implemented")
+        }
 
+        override fun areContentsTheSame(oldItem: Celeb, newItem: Celeb): Boolean {
+            TODO("Not yet implemented")
+        }
+
+
+    }
+}
 
 }
